@@ -1,0 +1,20 @@
+name: test Path
+
+on:
+  pull_request:
+    branches:
+      - "master"
+
+jobs:
+  prepare:
+    name: Pre-flight checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Display version
+        shell: pwsh
+        run: |
+          cd "/usr/share/"
+          ls -la
