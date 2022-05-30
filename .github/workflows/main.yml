@@ -1,9 +1,6 @@
 name: test Path
 
-on:
-  pull_request:
-    branches:
-      - "master"
+on: workflow_dispatch
 
 jobs:
   prepare:
